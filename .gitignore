@@ -3,3 +3,4 @@
 maps/.cache
 fetchjson/node_modules
 maps/dist
+.next
