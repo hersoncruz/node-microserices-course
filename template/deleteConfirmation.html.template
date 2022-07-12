@@ -1,0 +1,149 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            text-align: left;
+            background-color: white;
+            background-image: url("{{backgroundImage}}");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: auto 100%;
+            color: black;
+        }
+
+        .header {
+            background-color: white;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100vw;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            margin: 10px 60px 10px 32px;
+        }
+
+        .screenreader-text {
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            display: block;
+            margin: -1px;
+            overflow: hidden;
+        }
+
+        .spacer {
+            flex-grow: 1;
+        }
+
+        .brand-logos {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .logo {
+            margin: 0 0 0 1.25rem;
+        }
+
+        .logo-img {
+            max-height: 72px;
+            height: auto;
+            width: auto;
+        }
+
+        .bb-logo-img {
+            max-height: 72px;
+            height: auto;
+        }
+
+        .content-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh);
+            max-height: 1024px;
+        }
+
+        .content-box {
+            background-color: white;
+            width: 60vw;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 4px 4px 4px black;
+            padding: 40px;
+        }
+
+        .whole-bagel {
+            background: white bottom left no-repeat url("{{wholeBagel}}")
+        }
+
+        .eaten-bagel {
+            background: white bottom left no-repeat url("{{eatenBagel}}")
+        }
+
+        .title {
+            color: {{titleColor}};
+            font-weight: 800;
+            font-size: 2.5rem;
+            margin-bottom: 26px;
+        }
+
+        .subtext {
+            line-height: 1.5em;
+            margin: auto;
+            width: 55%;
+        }
+    </style>
+</head>
+
+<body>
+<header class="header">
+    <div class="header-content">
+        <div class="header-titles">
+            <a href="https://bagelbrands.com/">
+                <img class="bb-logo-img" width="350" height="70" src="{{bagelBrandsLogo}}">
+                <span class="screenreader-text">Bagel Brands</span>
+            </a>
+        </div>
+        <div class="spacer"></div>
+        <div class="brand-logos">
+            <div class="logo">
+                <a href="https://www.einsteinbros.com/">
+                    <img class="logo-img" width="141" height="141" src="{{ebbLogo}}">
+                    <span class="screenreader-text">Einstein Bros. Bagels</span>
+                </a>
+            </div>
+            <div class="logo">
+                <a href="https://www.brueggers.com/">
+                    <img class="logo-img" width="141" height="141" src="{{bruLogo}}">
+                    <span class="screenreader-text">Bruegger's Bagels</span>
+                </a>
+            </div>
+            <div class="logo">
+                <a href="https://www.noahs.com/">
+                    <img class="logo-img" width="141" height="141" src="{{nnybLogo}}">
+                    <span class="screenreader-text">Noah’s NY Bagels</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="content-container">
+    <div class="content-box whole-bagel">
+        <div class="title">{{title}}</div>
+        <div class="subtext">{{subtext}}</div>
+    </div>
+</div>
+</body>
+</html>
